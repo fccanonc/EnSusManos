@@ -6,6 +6,7 @@
 package com.mycompany.apiensusmanos.modelo.dao;
 
 import com.mycompany.apiensusmanos.modelo.entity.Eventos;
+import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -45,5 +46,11 @@ public class EventosRepositorio {
         criteria.add(Restrictions.eq("id_eventos", id));
         return (Eventos) criteria.uniqueResult();
     }
+    
+    public List<Eventos> getAllEventos() {
+        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Eventos.class);
+        return criteria.list();
+    }
+
 
 }
