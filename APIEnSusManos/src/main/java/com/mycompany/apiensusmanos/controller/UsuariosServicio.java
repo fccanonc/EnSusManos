@@ -27,3 +27,4 @@ public class UsuariosServicio {
         return usuariosRepositorio.getAllCiudadanos();
     }
 }
+
