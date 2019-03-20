@@ -5,11 +5,6 @@
  */
 package com.mycompany.apiensusmanos.controller.settings;
 
-/**
- *
- * @author Camilo Cañon
- */
-import com.mycompany.apiensusmanos.controller.settings.InitConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.Filter;
