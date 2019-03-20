@@ -54,20 +54,4 @@ public class Puntos {
         this.descripcion = descripcion;
     }
 
-    public Usuarios getUsuarios() {
-        return usuarios;
-    }
-
-    public void setUsuarios(Usuarios usuarios) {
-        this.usuarios = usuarios;
-    }
-
-    public Eventos getEventos() {
-        return eventos;
-    }
-
-    public void setEventos(Eventos eventos) {
-        this.eventos = eventos;
-    }
-
 }

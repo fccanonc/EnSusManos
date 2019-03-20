@@ -1,6 +1,7 @@
 package com.mycompany.apiensusmanos.modelo.dao;
 
 import com.mycompany.apiensusmanos.modelo.entity.Eventos;
+import com.mycompany.apiensusmanos.modelo.entity.Puntos;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
@@ -24,21 +25,23 @@ public class PuntosRepositorio {
         this.sessionFactory = sessionFactory;
     }
 
-    public long registrarEventoByCiudadano(Eventos eventos) {
-        getSessionFactory().getCurrentSession().save(eventos);
-        return eventos.getId_eventos();
-    }
-
-    public Eventos getEventosByCiudadano(int id) {
-        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Eventos.class);
-        criteria.add(Restrictions.eq("id_eventos", id));
-        return (Eventos) criteria.uniqueResult();
-    }
-
-    public List<Eventos> getAllPuntos() {
-        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Eventos.class);
+    public List<Puntos> getPuntosdescripcion(String descripcion) {
+        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Puntos.class);
+        if (descripcion != null) {
+            criteria.add(Restrictions.eq("descripcion", descripcion));
+        }
         return criteria.list();
     }
-    
-    
+
+    public Puntos getPuntosID(int id) {
+        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Puntos.class);
+        criteria.add(Restrictions.eq("id_puntos", id));
+        return (Puntos) criteria.uniqueResult();
+    }
+
+    public long crearPuntos(Puntos puntos) {
+        getSessionFactory().getCurrentSession().save(puntos);
+        return puntos.getId_puntos();
+    }
+
 }

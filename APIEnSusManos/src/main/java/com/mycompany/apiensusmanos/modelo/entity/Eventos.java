@@ -84,20 +84,4 @@ public class Eventos {
         this.hora = hora;
     }
 
-    public List<Puntos> getPuntos() {
-        return puntos;
-    }
-
-    public void setPuntos(List<Puntos> puntos) {
-        this.puntos = puntos;
-    }
-
-    public Usuarios getUsuariosEventos() {
-        return usuariosEventos;
-    }
-
-    public void setUsuariosEventos(Usuarios usuariosEventos) {
-        this.usuariosEventos = usuariosEventos;
-    }
-
 }

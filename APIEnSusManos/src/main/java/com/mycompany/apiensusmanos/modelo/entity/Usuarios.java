@@ -14,7 +14,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "usuarios")
 public class Usuarios {
@@ -33,7 +32,7 @@ public class Usuarios {
     @Column(name = "barrio_usuarios")
     private String barrio;
 
-    @Column(name = "usu_usuarios")
+    @Column(name = "usu_usuario")
     private String usuario;
 
     @Column(name = "pass_usuarios")
@@ -95,22 +94,6 @@ public class Usuarios {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public List<Puntos> getPuntos() {
-        return puntos;
-    }
-
-    public void setPuntos(List<Puntos> puntos) {
-        this.puntos = puntos;
-    }
-
-    public List<Eventos> getEventos() {
-        return eventos;
-    }
-
-    public void setEventos(List<Eventos> eventos) {
-        this.eventos = eventos;
     }
 
 }

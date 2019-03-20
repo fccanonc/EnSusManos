@@ -1,5 +1,6 @@
 package com.mycompany.apiensusmanos.modelo.dao;
 
+import com.mycompany.apiensusmanos.modelo.entity.Eventos;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -16,7 +17,7 @@ public class UsuariosRepositorio {
 
     @Autowired
     private SessionFactory sessionFactory;
-    
+
     public SessionFactory getSessionFactory() {
         return sessionFactory;
     }
@@ -43,20 +44,35 @@ public class UsuariosRepositorio {
         return usuarios.getId_usuarios();
     }
 
-    public Usuarios getCiudadanoById(int id) {
-        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Usuarios.class);
-        criteria.add(Restrictions.eq("id_usuarios", id));
-        return (Usuarios) criteria.uniqueResult();
-    }
-
     public List<Usuarios> getAllCiudadanos() {
         Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Usuarios.class);
         return criteria.list();
     }
-    
-    public List<Usuarios> getCiudadanosOrdenados(){
-       Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Usuarios.class);
-        criteria.addOrder(Order.asc("nombre"));
+
+    public List<Usuarios> getUsuariosnombreybarrio(String nombre, String barrio) {
+
+        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Usuarios.class);
+        if (nombre != null) {
+            criteria.add(Restrictions.eq("nombre", nombre));
+        }
+        if (barrio != null) {
+            criteria.add(Restrictions.eq("barrio", barrio));
+        }
         return criteria.list();
     }
+
+    public Usuarios getUsuariosID(int id) {
+        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Usuarios.class);
+        criteria.add(Restrictions.eq("id_usuarios", id));
+        return (Usuarios) criteria.uniqueResult();
+
+    }
+
+    public List<Usuarios> getCiudadanosOrdenado() {
+        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Usuarios.class);
+        criteria.addOrder(Order.desc("nombre"));
+        return criteria.list();
+
+    }
+
 }

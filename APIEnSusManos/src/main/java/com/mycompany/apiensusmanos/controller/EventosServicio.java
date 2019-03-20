@@ -15,8 +15,18 @@ public class EventosServicio {
     public EventosServicio() {
     }
 
-    public List<Eventos> getAllEvent() {
-        return eventosRepositorio.getAllEventos();
+    public List<Eventos> getEventosBynombreydescripcion(String nombre, String descripcion) {
+        List<Eventos> eventos = eventosRepositorio.getEventosBynombreydescripcion(nombre, descripcion);
+        return eventos;
+
     }
 
+    public Eventos getEventoID(int id) {
+        return eventosRepositorio.getEventoID(id);
+    }
+
+    public String crearEventos(Eventos eventos) {
+        long eventosId = eventosRepositorio.crearEventos(eventos);
+        return "Evento creado con ID:" + eventosId;
+    }
 }

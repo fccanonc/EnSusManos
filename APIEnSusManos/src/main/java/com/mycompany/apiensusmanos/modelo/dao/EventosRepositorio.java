@@ -16,9 +16,6 @@ public class EventosRepositorio {
     @Autowired
     private SessionFactory sessionFactory;
 
-    @Autowired
-    private Criteria criteria;
-
     public SessionFactory getSessionFactory() {
         return sessionFactory;
     }
@@ -32,16 +29,33 @@ public class EventosRepositorio {
         return eventos.getId_eventos();
     }
 
-    public Eventos getEventosByCiudadano(int id) {
-        criteria = getSessionFactory().getCurrentSession().createCriteria(Eventos.class);
-        criteria.add(Restrictions.eq("id_eventos", id));
+    public Eventos obtenerPersonaPorID(int id) {
+        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Eventos.class);
+        criteria.add(Restrictions.eq("eventoId", id));
         return (Eventos) criteria.uniqueResult();
     }
-    
-    public List<Eventos> getAllEventos() {
+
+    public List<Eventos> getEventosBynombreydescripcion(String nombre, String descripcion) {
         Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Eventos.class);
+        if (nombre != null) {
+            criteria.add(Restrictions.eq("nombre", nombre));
+        }
+        if (descripcion != null) {
+            criteria.add(Restrictions.eq("descripcion", descripcion));
+        }
         return criteria.list();
     }
 
+    public Eventos getEventoID(int id) {
+        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Eventos.class);
+        criteria.add(Restrictions.eq("id_eventos", id));
+        return (Eventos) criteria.uniqueResult();
+
+    }
+
+    public long crearEventos(Eventos eventos) {
+        getSessionFactory().getCurrentSession().save(eventos);
+        return eventos.getId_eventos();
+    }
 
 }
