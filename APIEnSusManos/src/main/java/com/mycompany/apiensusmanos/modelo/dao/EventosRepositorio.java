@@ -31,7 +31,7 @@ public class EventosRepositorio {
 
     public Eventos obtenerPersonaPorID(int id) {
         Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Eventos.class);
-        criteria.add(Restrictions.eq("eventoId", id));
+        criteria.add(Restrictions.eq("id_eventos", id));
         return (Eventos) criteria.uniqueResult();
     }
 

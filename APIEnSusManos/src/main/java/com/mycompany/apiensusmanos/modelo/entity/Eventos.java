@@ -28,7 +28,7 @@ public class Eventos {
     private String descripcion;
 
     @Column(name = "fecha_eventos")
-    private Date fecha;
+    private String fecha;
 
     @Column(name = "hora_eventos")
     private String hora;
@@ -68,11 +68,11 @@ public class Eventos {
         this.descripcion = descripcion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

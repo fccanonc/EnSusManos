@@ -89,14 +89,16 @@ public class Controller {
     }
 
     @RequestMapping(value = "/autenticacion/", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> obtenerAutenticación(@RequestParam(value = "usuarios", required = false) String usuario, @RequestParam(value = "password", required = false) String password) {
-        String resultado = "Se autentico el usuario con exito: " + usuariosServicio.Autenticacion(usuario, password);
-        return new ResponseEntity<String>(resultado, HttpStatus.OK);
+    public ResponseEntity<List<Usuarios>> ObtenerLogin(@RequestParam(value = "usuario", required = true) String user,
+            @RequestParam(value = "password", required = true) String pass) {
+        List<Usuarios> usuarios = usuariosServicio.Autenticacion(user, pass);
+        return new ResponseEntity<List<Usuarios>>(usuarios, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/crecionCiudadanos/", method = RequestMethod.POST, consumes
-            = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> crearCiudadanos(@RequestBody Usuarios usuarios) {
+
+@RequestMapping(value = "/crecionCiudadanos/", method = RequestMethod.POST, consumes
+        = MediaType.APPLICATION_JSON_VALUE)
+        public ResponseEntity<String> crearCiudadanos(@RequestBody Usuarios usuarios) {
         String resultado = "Se creo usuario con ID: " + usuariosServicio.crearUsuario(usuarios);
         return new ResponseEntity<String>(resultado, HttpStatus.OK);
     }
