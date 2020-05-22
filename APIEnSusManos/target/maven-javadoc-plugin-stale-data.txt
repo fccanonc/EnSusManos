@@ -1,0 +1,19 @@
+cmd.exe
+/X
+/C
+""C:\Program Files\Java\jdk1.8.0_181\jre\..\bin\javadoc.exe" @options @argfile"
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\allclasses-frame.html = 1588275548617
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\allclasses-noframe.html = 1588275548624
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\argfile = 1588275545239
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\constant-values.html = 1588275548012
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\deprecated-list.html = 1588275548595
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\help-doc.html = 1588275548836
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\index-all.html = 1588275548572
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\index.html = 1588275548640
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\options = 1588275545237
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\overview-frame.html = 1588275547768
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\overview-summary.html = 1588275548812
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\overview-tree.html = 1588275548545
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\package-list = 1588275547759
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\script.js = 1588275548869
+C:\Users\Camilo Cañon\Documents\NetBeansProjects\EnSusManos\APIEnSusManos\target\site\apidocs\stylesheet.css = 1588275548859

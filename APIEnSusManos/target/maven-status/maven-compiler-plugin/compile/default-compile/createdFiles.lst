@@ -1,0 +1,14 @@
+com\mycompany\apiensusmanos\controller\settings\InitConfiguration.class
+com\mycompany\apiensusmanos\controller\EventosServicio.class
+com\mycompany\apiensusmanos\modelo\entity\Usuarios.class
+com\mycompany\apiensusmanos\modelo\dao\UsuariosRepositorio.class
+com\mycompany\apiensusmanos\controller\settings\RestInitializer.class
+com\mycompany\apiensusmanos\modelo\dao\PuntosRepositorio.class
+com\mycompany\apiensusmanos\modelo\entity\Eventos.class
+com\mycompany\apiensusmanos\controller\Controller.class
+com\mycompany\apiensusmanos\controller\settings\HibernateConfiguration.class
+com\mycompany\apiensusmanos\controller\UsuariosServicio.class
+com\mycompany\apiensusmanos\modelo\dao\EventosRepositorio.class
+com\mycompany\apiensusmanos\controller\settings\CORSFilter.class
+com\mycompany\apiensusmanos\modelo\entity\Puntos.class
+com\mycompany\apiensusmanos\controller\PuntosServicio.class
