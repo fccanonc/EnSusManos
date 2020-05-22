@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Puntos</title>
+    <meta name="description">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../css/ensusmanosmain.css" rel="stylesheet" id="bootstrap-css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="../js/main.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+        <div class="col-md-12">
+			<h1>Creación de Puntos</h1>
+			
+			<form method="POST" action="../html/puntos.html">
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label class="control-label" for="formGroupExampleInput">ID Punto:</label>
+					</div >
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="punto_id" placeholder="ID Punto">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label class="control-label" for="formGroupExampleInput">Descripciòn:</label>
+					</div >
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="descrip_puntos" placeholder="Descripciòn">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label class="control-label" for="formGroupExampleInput">Id Ciudadano:</label>
+					</div >
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="punto_ciudadano_id" placeholder="Id Ciudadano">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<label class="control-label" for="formGroupExampleInput">Id Evento:</label>
+					</div >
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="punto_evento_id" placeholder="Id Evento">
+					</div>
+				</div>
+				  <button type="submit" class="btn btn-primary" id="crearPuntos">Crear</button>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

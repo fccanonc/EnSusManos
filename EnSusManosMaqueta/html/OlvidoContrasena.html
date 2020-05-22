@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Recordar Contraseña</title>
+    <meta name="description">
+    <meta name="viewport" content="width=device-width">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="../css/ensusmanosmain.css" rel="stylesheet" id="bootstrap-css">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+	<script src="../js/main.js"></script>
+</head>
+
+<body>
+	<section class="alert alert-danger" style="display:none;">
+	  <button type="button" class="close" data-dismiss="alert">&times;</button>
+	  <strong>¡Error!</strong> Usuario o contraseña no son correctos.
+	</section>
+	<section class="alert alert-success" style="display:none;">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<strong>¡Exito!</strong> La contraseña fue enviada a su correo electronico.
+	</section>
+    <section class="wrapper fadeInDown">
+        <section id="formContent">
+
+            <section class="fadeIn first">
+                <img src="../img/IconEnSusManos.png" id="icon" alt="User Icon" />
+            </section>
+				<form role="form" id="login-recordar" method="post">
+					<span class="help-block">
+						  Digite su Email para recordar la contraseña.
+					</span>
+					<input class="fadeIn third" placeholder="Email" name="email" type="text" required="">
+					<button type="submit" class="fadeIn fourth" id="btn-olvidado">Continuar</button>
+				</form>
+            <footer id="formFooterOlvido">
+                <a class="underlineHover" href="../html/Login.html">Volver a LogIn</a>
+            </footer>
+
+        </section>
+    </section>
+</body>
+
+</html>
