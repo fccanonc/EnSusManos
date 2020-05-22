@@ -57,5 +57,11 @@ public class EventosRepositorio {
         getSessionFactory().getCurrentSession().save(eventos);
         return eventos.getId_eventos();
     }
+    
+    public Eventos getCiudadanoByEventos(int id){
+        Criteria criteria = getSessionFactory().getCurrentSession().createCriteria(Eventos.class);
+        criteria.add(Restrictions.eq("Id_usuarios_eventos", id));
+        return null;
+    }
 
 }

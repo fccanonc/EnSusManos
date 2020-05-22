@@ -95,12 +95,17 @@ public class Controller {
         return new ResponseEntity<List<Usuarios>>(usuarios, HttpStatus.OK);
     }
 
-
-@RequestMapping(value = "/crecionCiudadanos/", method = RequestMethod.POST, consumes
-        = MediaType.APPLICATION_JSON_VALUE)
-        public ResponseEntity<String> crearCiudadanos(@RequestBody Usuarios usuarios) {
+    @RequestMapping(value = "/crecionCiudadanos/", method = RequestMethod.POST, consumes
+            = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> crearCiudadanos(@RequestBody Usuarios usuarios) {
         String resultado = "Se creo usuario con ID: " + usuariosServicio.crearUsuario(usuarios);
         return new ResponseEntity<String>(resultado, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/usuarios/{id_usuarios}/eventos/", method = RequestMethod.GET)
+    public ResponseEntity<Eventos> obtenerEventosPorIdCiudadano(@PathVariable("id_usuarios") int id) {
+        Eventos usuarioEvento = eventosServicio.getCiudadanoByEventos(id);
+        return new ResponseEntity<>(usuarioEvento, HttpStatus.OK);
     }
 
 }

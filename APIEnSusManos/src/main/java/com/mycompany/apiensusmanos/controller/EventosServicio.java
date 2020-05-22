@@ -29,4 +29,8 @@ public class EventosServicio {
         long eventosId = eventosRepositorio.crearEventos(eventos);
         return "Evento creado con ID:" + eventosId;
     }
+    
+    public Eventos getCiudadanoByEventos(int id){
+        return eventosRepositorio.getCiudadanoByEventos(id);
+    }
 }

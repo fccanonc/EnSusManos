@@ -1,6 +1,5 @@
 package com.mycompany.apiensusmanos.modelo.dao;
 
-import com.mycompany.apiensusmanos.modelo.entity.Eventos;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;

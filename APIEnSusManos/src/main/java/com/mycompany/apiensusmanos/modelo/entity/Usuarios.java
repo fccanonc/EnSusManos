@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "usuarios")
@@ -43,6 +44,13 @@ public class Usuarios {
 
     @OneToMany(mappedBy = "usuariosEventos")
     private List<Eventos> eventos;
+    
+    @Transient
+    private int idEvento;
+    
+    @Transient
+    private int idPuntos;
+
 
     public Usuarios() {
 
